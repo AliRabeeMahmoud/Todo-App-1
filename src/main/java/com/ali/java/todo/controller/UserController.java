@@ -12,7 +12,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-//@Profile("dev")
+@Profile("dev")
 @RequestMapping("/api/v1/user")
 public class UserController  {
 
