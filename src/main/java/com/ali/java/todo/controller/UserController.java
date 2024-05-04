@@ -4,6 +4,7 @@ package com.ali.java.todo.controller;
 import com.ali.java.todo.model.User;
 import com.ali.java.todo.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
+//@Profile("dev")
 @RequestMapping("/api/v1/user")
 public class UserController  {
 

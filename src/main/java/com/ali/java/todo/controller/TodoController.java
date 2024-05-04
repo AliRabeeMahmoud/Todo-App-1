@@ -3,6 +3,7 @@ package com.ali.java.todo.controller;
 import com.ali.java.todo.model.Todo;
 import com.ali.java.todo.service.TodoService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@Profile("prod")
 @RequestMapping("/api/v1/todo")
 @RequiredArgsConstructor
 public class TodoController  {
