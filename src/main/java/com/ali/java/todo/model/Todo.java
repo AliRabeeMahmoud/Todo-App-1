@@ -31,7 +31,7 @@ public class Todo {
     private Boolean favorite;
 
     @ManyToOne
-    @JoinColumn(name = "categoryId")
+    @JoinColumn(name = "userId")
     @JsonIgnore
-    private Category category;
+    private User user;
 }

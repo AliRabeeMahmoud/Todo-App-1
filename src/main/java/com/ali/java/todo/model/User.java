@@ -28,7 +28,8 @@ public class User  {
 
     private String password;
 
+    private String role;
+
     @OneToMany(mappedBy = "user")
-    @JsonIgnore
-    private List<Category> category;
+    private List<Todo> todos;
 }

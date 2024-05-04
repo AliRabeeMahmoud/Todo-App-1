@@ -28,11 +28,11 @@ public class UserServiceImpl implements UserService {
     public User update(User user) {
         User oldUser = userRepository.findById(user.getId()).orElse(null);
         oldUser.setUserName(user.getUserName());
-        oldUser.setCategory(user.getCategory());
         oldUser.setEmail(user.getEmail());
         oldUser.setPassword(user.getPassword());
         oldUser.setFirstName(user.getFirstName());
         oldUser.setLastName(user.getLastName());
+        userRepository.save(oldUser);
         return oldUser;
     }
 

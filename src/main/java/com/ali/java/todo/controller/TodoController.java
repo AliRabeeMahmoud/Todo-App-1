@@ -1,7 +1,6 @@
 package com.ali.java.todo.controller;
 
 import com.ali.java.todo.model.Todo;
-import com.ali.java.todo.service.CategoryService;
 import com.ali.java.todo.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,12 +18,9 @@ public class TodoController  {
     private final TodoService todoService;
 
 
-    private final CategoryService categoryService;
-
-
     @PostMapping
-    public ResponseEntity<Todo> createTodo(@RequestBody Todo user) {
-        return new ResponseEntity<>(todoService.save(user), HttpStatus.CREATED);
+    public ResponseEntity<Todo> createTodo(@RequestBody Todo todo) {
+        return new ResponseEntity<>(todoService.save(todo), HttpStatus.CREATED);
     }
 
 
